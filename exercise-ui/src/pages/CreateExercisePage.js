@@ -9,11 +9,10 @@ export const CreateExercisePage = () => {
     const [unit, setUnit] = useState('');
     const [date, setDate] = useState('');
 
-
     const history = useHistory();
 
     const createExercise = async () => {
-        const newExercise = { name: name, reps: reps, weight: weight, unit: unit, date: date }
+        const newExercise = { name, reps, weight, unit, date }
         const response = await fetch('/exercises', {
             method: 'POST',
             body: JSON.stringify(newExercise),
@@ -43,7 +42,7 @@ export const CreateExercisePage = () => {
                 placeholder="Enter the number of reps here"
                 onChange={e => setReps(e.target.value)} />
             <input
-                type="text"
+                type="number"
                 placeholder="Enter the weight here"
                 value={weight}
                 onChange={e => setWeight(e.target.value)} />

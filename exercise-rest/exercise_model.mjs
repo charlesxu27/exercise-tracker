@@ -38,8 +38,7 @@ const Exercise = mongoose.model("Exercise", exerciseSchema);
  * @param {Number} reps 
  * @param {Number} weight 
  * @param {String} unit 
- * @param {String} date 
-
+ * @param {String} date
  * @returns A promise. Resolves to the JSON object for the document created by calling save
  */
 const createExercise
@@ -102,4 +101,4 @@ const deleteById = async (_id) => {
     return result.deletedCount;
 }
 
-export { createExercise, findExercises as findExercises, findExerciseById as findExerciseById, replaceExercise as replaceExercise, deleteById };
+export { createExercise, findExercises, findExerciseById, replaceExercise, deleteById };
