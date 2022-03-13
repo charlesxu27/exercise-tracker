@@ -17,10 +17,10 @@ app.post('/exercises', (req, res) => {
         })
         .catch(error => {
             console.error(error);
-            // In case of an error, send back status code 400 in case of an error.
+            // In case of an error, send back status code 00 in case of an error.
             // A better approach will be to examine the error and send an
             // error status code corresponding to the error.
-            res.status(400).json({ Error: 'Request failed' });
+            res.status(500).json({ Error: 'Request failed' });
         });
 });
 
