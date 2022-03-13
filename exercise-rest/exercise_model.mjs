@@ -33,7 +33,7 @@ const exerciseSchema = mongoose.Schema({
 const Exercise = mongoose.model("Exercise", exerciseSchema);
 
 /**
- * Create a movie
+ * Create an exercise
  * @param {String} name 
  * @param {Number} reps 
  * @param {Number} weight 
@@ -51,7 +51,7 @@ const createExercise
     }
 
 /**
- * Retrive movies based on the filter, projection and limit parameters
+ * Retrieve exercises based on the filter, projection and limit parameters
  * @param {Object} filter 
  * @param {String} projection 
  * @param {Number} limit 
@@ -65,7 +65,7 @@ const findExercises = async (filter, projection, limit) => {
 }
 
 /**
- * Find the movie with the given ID value
+ * Find the exercise with the given ID value
  * @param {String} _id
  * @returns 
  */
@@ -75,7 +75,7 @@ const findExerciseById = async (_id) => {
 }
 
 /**
- * Replace the title, year, language properties of the movie with the id value provided
+ * Replace the name, reps, weight, unit, and date properties of the exercise with the id value provided
  * @param {String} _id 
  * @param {String} name 
  * @param {Number} reps 
