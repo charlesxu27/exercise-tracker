@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(255,255,255);
+  background-color: lightgoldenrodyellow
 }
 
 .App {
@@ -7,7 +7,6 @@ body {
 }
 
 .App-header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +24,8 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: lightcyan;}
+tr:nth-child(even){background-color: lightskyblue;}
 
 tr:hover {background-color: #ddd;}
 
@@ -36,3 +36,25 @@ th {
   background-color: #04AA6D;
   color: white;
 }
+
+#create-button {
+  margin-top: 30px;
+  color: black;
+  font-size: smaller;
+  padding: 10px;
+  background-color: orange;
+  border: black 5px solid;
+}
+
+header {
+  color: orange
+}
+
+footer {
+  margin-top: 100px;
+  height: 180px;
+  clear: both;
+}
+
+
+

@@ -23,7 +23,7 @@ export const EditExercisePage = ({ exerciseToEdit }) => {
         if (response.status === 200) {
             alert("Successfully edited the exercise!");
         } else {
-            alert(`Failed to edit exercise, status code = ${response.status}`);
+            alert(`Failed to edit the exercise, due to missing input (status code = ${response.status}).`);
         }
         history.push("/");
     };
@@ -43,12 +43,13 @@ export const EditExercisePage = ({ exerciseToEdit }) => {
                 type="number"
                 value={weight}
                 onChange={e => setWeight(e.target.value)} />
+            <select id="select-unit" required="true" default='kgs' value={unit} onChange={e => setUnit(e.target.value)}>
+                <option value="kgs" >kgs</option>
+                <option value="lbs">lbs</option>
+            </select>
             <input
-                type="text"
-                value={unit}
-                onChange={e => setUnit(e.target.value)} />
-            <input
-                type="text"
+                required="true"
+                type="date"
                 value={date}
                 onChange={e => setDate(e.target.value)} />
             <button

@@ -23,7 +23,7 @@ export const CreateExercisePage = () => {
         if (response.status === 201) {
             alert("Successfully added the exercise!");
         } else {
-            alert(`Failed to add exercise, status code = ${response.status}`);
+            alert(`Failed to add a row, due to missing input (status code = ${response.status}).`);
         }
         history.push("/");
     };
@@ -32,30 +32,36 @@ export const CreateExercisePage = () => {
         <div>
             <h1>Create Exercise</h1>
             <input
+                required="true"
                 type="text"
                 placeholder="Enter the name here"
                 value={name}
                 onChange={e => setName(e.target.value)} />
             <input
+                required="true"
                 type="number"
                 value={reps}
                 placeholder="Enter the number of reps here"
                 onChange={e => setReps(e.target.value)} />
             <input
+                required="true"
                 type="number"
                 placeholder="Enter the weight here"
                 value={weight}
                 onChange={e => setWeight(e.target.value)} />
+            <select id="select-unit" required="true" default='kgs' value={unit} onChange={e => setUnit(e.target.value)}>
+                {/* Select code referenced from: (03/11/2022)
+                https://www.javascripttutorial.net/javascript-dom/javascript-select-box/ */}
+                <option value="kgs" >kgs</option>
+                <option value="lbs">lbs</option>
+            </select>
             <input
-                type="text"
-                placeholder="Select the unit here"
-                value={unit}
-                onChange={e => setUnit(e.target.value)} />
-            <input
-                type="text"
-                placeholder="Record the date here"
+                required="true"
+                type="date"
                 value={date}
                 onChange={e => setDate(e.target.value)} />
+                {/* Note to self: it is IMPOSSIBLE to change date format?!
+                https://stackoverflow.com/questions/7372038/is-there-any-way-to-change-input-type-date-format */}
             <button
                 onClick={createExercise}
             >Create</button>
@@ -64,3 +70,5 @@ export const CreateExercisePage = () => {
 }
 
 export default CreateExercisePage;
+
+

@@ -12,18 +12,26 @@ function App() {
 
   return (
     <div className="App">
+
+      <header>
+        <h1>Exercise Tracker</h1>
+        <p>A simple but effective tool to log your exercises.</p>
+      </header>
       <Router>
-        <div className="App-header">
-          <Route path="/" exact>
-            <HomePage setExerciseToEdit={setExerciseToEdit} />
-          </Route>
-          <Route path="/create-exercise">
-            <CreateExercisePage />
-          </Route>
-          <Route path="/edit-exercise">
-            <EditExercisePage exerciseToEdit={exerciseToEdit} />
-          </Route>
-        </div>
+        <main>
+          <div className="App-header">
+            <Route path="/" exact>
+              <HomePage setExerciseToEdit={setExerciseToEdit} />
+            </Route>
+            <Route path="/create-exercise">
+              <CreateExercisePage />
+            </Route>
+            <Route path="/edit-exercise">
+              <EditExercisePage exerciseToEdit={exerciseToEdit} />
+            </Route>
+          </div>
+        </main>
+        <footer> © 2022 Charles Xu </footer>
       </Router>
     </div>
   );
