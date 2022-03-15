@@ -34,33 +34,34 @@ export const CreateExercisePage = () => {
             <input
                 required="true"
                 type="text"
-                placeholder="Enter the name here"
+                placeholder="Name"
                 value={name}
                 onChange={e => setName(e.target.value)} />
             <input
                 required="true"
                 type="number"
                 value={reps}
-                placeholder="Enter the number of reps here"
+                placeholder="# of Reps"
                 onChange={e => setReps(e.target.value)} />
             <input
                 required="true"
                 type="number"
-                placeholder="Enter the weight here"
+                placeholder="Weight"
                 value={weight}
                 onChange={e => setWeight(e.target.value)} />
-            <select id="select-unit" required="true" default='kgs' value={unit} onChange={e => setUnit(e.target.value)}>
+            <select id="select-unit" required="true" default='lbs' value={unit} onChange={e => setUnit(e.target.value)}>
                 {/* Select code referenced from: (03/11/2022)
                 https://www.javascripttutorial.net/javascript-dom/javascript-select-box/ */}
-                <option value="kgs" >kgs</option>
+                <option value="n/a">Units</option>
                 <option value="lbs">lbs</option>
+                <option value="kgs" >kgs</option>
             </select>
             <input
                 required="true"
                 type="date"
                 value={date}
                 onChange={e => setDate(e.target.value)} />
-                {/* Note to self: it is IMPOSSIBLE to change date format?!
+            {/* Note to self: it is IMPOSSIBLE to change date format?!
                 https://stackoverflow.com/questions/7372038/is-there-any-way-to-change-input-type-date-format */}
             <button
                 onClick={createExercise}

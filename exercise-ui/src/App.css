@@ -53,7 +53,12 @@ header {
 footer {
   margin-top: 100px;
   height: 180px;
-  clear: both;
+  bottom: 10px;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: bold;
 }
 
 
