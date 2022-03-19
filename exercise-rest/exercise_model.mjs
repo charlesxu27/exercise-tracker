@@ -1,9 +1,9 @@
 // Get the mongoose object
 import mongoose from 'mongoose';
 
-// Prepare to the database exercises_db in the MongoDB server running locally on port 27017
+// Prepare to the database exercises_db in the MongoDB server running locally on port 3000
 mongoose.connect(
-    'mongodb://localhost:27017/exercises_db',
+    'mongodb+srv://charlesxuosu:36YaZLgLzHQSTDID@exercisetracker.cbsjl.mongodb.net/ExerciseTracker?retryWrites=true&w=majority',
     { useNewUrlParser: true }
 );
 

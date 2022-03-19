@@ -1,9 +1,15 @@
 body {
-  background-color: lightgoldenrodyellow
+  display: flex;
+  flex-direction: column;
+  background-color: lightpink;
+
 }
 
 .App {
+  background-color: lightpink;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-header {
@@ -12,7 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  color: navy;
 }
 
 .App-link {
@@ -20,40 +26,66 @@ body {
 }
 
 td, th {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1.5px solid navy;
+  padding: 5px;
+  border-radius: 5%;
+
 }
 
 tr:nth-child(odd){background-color: lightcyan;}
 tr:nth-child(even){background-color: lightskyblue;}
 
-tr:hover {background-color: #ddd;}
+tr:hover {
+  background-color: paleturquoise;
+  font-weight: bold;
+}
 
 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: paleturquoise;
+  color: navy;
 }
 
 #create-button {
-  margin-top: 30px;
-  color: black;
+  margin: 30px;
+  color: navy;
   font-size: smaller;
   padding: 10px;
-  background-color: orange;
-  border: black 5px solid;
+  background-color: paleturquoise;
+  border: navy 5px solid;
+  border-radius: 5%;
+
+}
+
+#create-button:hover {
+  background-color: navy;
+  color: white;
+  border: paleturquoise 5px solid;
+
 }
 
 header {
-  color: orange
+  color: navy;
+  font-style: italic;
+  font-size: xx-large;
+  font-weight: bold;
+  background-color: lightskyblue;
+  padding: 20px;
 }
 
 footer {
-  margin-top: 100px;
-  height: 180px;
-  bottom: 10px;
+  text-align: center;
+  justify-self: center;
+  background-color: lightskyblue;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; 
 }
 
 h1 {
