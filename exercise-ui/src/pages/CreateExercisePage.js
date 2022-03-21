@@ -51,10 +51,8 @@ export const CreateExercisePage = () => {
                 type="number"
                 placeholder="Weight"
                 value={weight}
-                onChange={e => setWeight(e.target.value)} />
+                onChange={e => setWeight(e.target.value)}/>
             <select className='create-form' id="select-unit" required="true" default='lbs' value={unit} onChange={e => setUnit(e.target.value)}>
-                {/* Select code referenced from: (03/11/2022)
-                https://www.javascripttutorial.net/javascript-dom/javascript-select-box/ */}
                 <option value="n/a">Units</option>
                 <option value="lbs">lbs</option>
                 <option value="kgs" >kgs</option>

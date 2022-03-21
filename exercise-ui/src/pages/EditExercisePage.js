@@ -31,7 +31,7 @@ export const EditExercisePage = ({ exerciseToEdit }) => {
     return (
         <div id='edit-div'>
             <h1>Edit Exercise</h1>
-            <input 
+            <input
                 className='edit-form'
                 type="text"
                 value={name}
