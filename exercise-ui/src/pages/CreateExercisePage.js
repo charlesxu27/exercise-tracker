@@ -29,27 +29,30 @@ export const CreateExercisePage = () => {
     };
 
     return (
-        <div>
+        <div id='create-div'>
             <h1>Create Exercise</h1>
             <input
+                className='create-form'
                 required="true"
                 type="text"
                 placeholder="Name"
                 value={name}
                 onChange={e => setName(e.target.value)} />
             <input
+                className='create-form'
                 required="true"
                 type="number"
                 value={reps}
                 placeholder="# of Reps"
                 onChange={e => setReps(e.target.value)} />
             <input
+                className='create-form'
                 required="true"
                 type="number"
                 placeholder="Weight"
                 value={weight}
                 onChange={e => setWeight(e.target.value)} />
-            <select id="select-unit" required="true" default='lbs' value={unit} onChange={e => setUnit(e.target.value)}>
+            <select className='create-form' id="select-unit" required="true" default='lbs' value={unit} onChange={e => setUnit(e.target.value)}>
                 {/* Select code referenced from: (03/11/2022)
                 https://www.javascripttutorial.net/javascript-dom/javascript-select-box/ */}
                 <option value="n/a">Units</option>
@@ -57,6 +60,7 @@ export const CreateExercisePage = () => {
                 <option value="kgs" >kgs</option>
             </select>
             <input
+                className='edit-form'
                 required="true"
                 type="date"
                 value={date}
@@ -64,6 +68,7 @@ export const CreateExercisePage = () => {
             {/* Note to self: it is IMPOSSIBLE to change date format?!
                 https://stackoverflow.com/questions/7372038/is-there-any-way-to-change-input-type-date-format */}
             <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                 onClick={createExercise}
             >Create</button>
         </div>

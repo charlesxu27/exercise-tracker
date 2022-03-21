@@ -29,17 +29,20 @@ export const EditExercisePage = ({ exerciseToEdit }) => {
     };
 
     return (
-        <div>
+        <div id='edit-div'>
             <h1>Edit Exercise</h1>
-            <input
+            <input 
+                className='edit-form'
                 type="text"
                 value={name}
                 onChange={e => setName(e.target.value)} />
             <input
+                className='edit-form'
                 type="number"
                 value={reps}
                 onChange={e => setReps(e.target.value)} />
             <input
+                className='edit-form'
                 type="number"
                 value={weight}
                 onChange={e => setWeight(e.target.value)} />
@@ -49,13 +52,15 @@ export const EditExercisePage = ({ exerciseToEdit }) => {
                 <option value="kgs" >kgs</option>
             </select>
             <input
+                className='edit-form'
                 required="true"
                 type="date"
                 value={date}
                 onChange={e => setDate(e.target.value)} />
             <button
                 onClick={editExercise}
-            >Save</button>
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                Save</button>
         </div>
     );
 

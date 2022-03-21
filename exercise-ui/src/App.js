@@ -15,7 +15,7 @@ function App() {
 
       <header>
         <h1>Exercise Tracker</h1>
-        <p>A simple but effective tool to log your exercises.</p>
+        <p id='subtitle'>A simple but effective tool to log your exercises.</p>
       </header>
       <Router>
         <main>

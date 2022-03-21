@@ -36,9 +36,9 @@ function HomePage({ setExerciseToEdit }) {
 
     return (
         <>
-            <h2>Activities Log</h2>
+            <h2 id='table-title'>Activities Log</h2>
             <ExerciseList exercises={exercises} onDelete={onDelete} onEdit={onEdit}></ExerciseList>
-            <Link id="create-button" to="/create-exercise">Create an Exercise</Link>
+            <Link id="create-button" to="/create-exercise" class="bg-blue-500 hover:bg-blue-700 text-white font-sm font-bold py-2 px-4 rounded-full">Create an Exercise</Link>
         </>
     );
 }

@@ -8,9 +8,9 @@ function Exercise({ exercise, onDelete, onEdit }) {
             <td>{exercise.reps}</td>
             <td>{exercise.weight}</td>
             <td>{exercise.unit}</td>
-            <td>{exercise.date.substring(2,10)}</td>
+            <td>{exercise.date.substring(2, 10)}</td>
 
-            <td>< MdEdit onClick={() => onEdit(exercise)} /></td>
+            <td><MdEdit onClick={() => onEdit(exercise)}/></td>
             <td>< MdDeleteForever onClick={() => onDelete(exercise._id)} /></td>
         </tr>
     );

@@ -1,97 +1,113 @@
-body {
-  display: flex;
-  flex-direction: column;
-  background-color: lightpink;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+body {
+  background-color: #f8f7ff;
 }
 
 .App {
-  background-color: lightpink;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .App-header {
+  margin: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: calc(10px + 2vmin);
-  color: navy;
+  text-align: center;
+  background-color: #f8f7ff;
 }
 
-.App-link {
-  color: #61dafb;
+#table-title {
+  margin-bottom: 40px;
+  font-weight: bold;
 }
 
 td, th {
-  border: 1.5px solid navy;
   padding: 5px;
-  border-radius: 5%;
+} */
 
-}
-
-tr:nth-child(odd){background-color: lightcyan;}
-tr:nth-child(even){background-color: lightskyblue;}
+tr:nth-child(odd){background-color:  #f6f6f6;}
+tr:nth-child(even){background-color: #d6d6d6;}
 
 tr:hover {
-  background-color: paleturquoise;
+  background-color: #f8f9fa;
   font-weight: bold;
 }
 
 th {
   padding-top: 20px;
   padding-bottom: 20px;
-  text-align: center;
   padding-left: 50px;
   padding-right: 50px;
-  background-color: paleturquoise;
-  color: navy;
+  background-color: #4285f4;
+  color: #f6f6f6;
 }
 
 #create-button {
-  margin: 30px;
-  color: navy;
-  font-size: smaller;
-  padding: 10px;
-  background-color: paleturquoise;
-  border: navy 5px solid;
-  border-radius: 5%;
-
+  margin: 40px;
+  padding: 20px;
 }
 
 #create-button:hover {
-  background-color: navy;
-  color: white;
-  border: paleturquoise 5px solid;
+  background-color: white;
+  color: #4285f4;
+  border: #4285f4 5px solid;
 
 }
 
 header {
-  color: navy;
   font-style: italic;
   font-size: xx-large;
   font-weight: bold;
-  background-color: lightskyblue;
+  background-color: #fbbc05;
   padding: 20px;
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fbbc05;
+  position:fixed;
   text-align: center;
-  justify-self: center;
-  background-color: lightskyblue;
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem; 
+  min-height: 100px;
+  bottom:0;
+  left:0;
+  right:0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+#subtitle {
+  text-align: center;
 }
 
 h1 {
   font-size: 38px;
   font-weight: bold;
+  text-align: center;
 }
+
+.edit-form, .create-form {
+  font-size: 14;
+  margin: 10px;
+  color: #c1c1c1
+}
+
+.edit-form {
+  color: black;
+}
+
+#edit-div, #create-div {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
 
 
 
