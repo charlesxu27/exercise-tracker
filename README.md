@@ -1,5 +1,5 @@
 <h1>Exercise Tracking Web App</h1>
-**By Charles Xu**
+By Charles Xu
 
 ## Overview
 This website enables users to create-read-update-delete exercises, acting as an online fitness journal.
