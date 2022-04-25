@@ -5,6 +5,12 @@ By Charles Xu
 This website enables users to create-read-update-delete exercises, acting as an online fitness journal.
 Uses the MERN stack (MongoDB, Express, React, Node).
 
+## Instructions
+To run the REST API, open the folder and run `npm install` and then `npm start`
+To run the front-end, open the folder and run `npm install` and then `npm start`
+
+Run both folders to start the full-stack web app.
+
 ## To-dos
 Add user log-in capabilities
 Add exercise statistics overview page and data analytics
